@@ -15,8 +15,7 @@ $(document).ready(function () {
         if ($('#exampleInputPassword1').val().trim().toLowerCase() == "escape room") {
             $('#about').fadeIn();
             $('#events').fadeIn();
-            document.getElementById("about").scrollIntoView();
-            confetti();
+            setTimeout(function(){ document.getElementById("about").scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 1000);
         }
         else {
             $('#passwordAlert').fadeIn();
