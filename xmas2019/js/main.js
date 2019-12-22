@@ -7,6 +7,7 @@ $(document).ready(function () {
     $('.vhf-100').css("min-height", $(window).height() - $('.footer').outerHeight() );
     $('#passwordAlert').alert();
     $('#passwordAlert').hide();
+    $('#snowflakes').children().hide();
 
     $('#submitButton').click(function(event) {
         event.preventDefault();
@@ -16,6 +17,7 @@ $(document).ready(function () {
             $('#about').fadeIn();
             $('#events').fadeIn();
             setTimeout(function(){ document.getElementById("about").scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 1000);
+            $('#snowflakes').children().show();
         }
         else {
             $('#passwordAlert').fadeIn();
